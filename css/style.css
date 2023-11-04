@@ -1,0 +1,386 @@
+.main__container {
+	padding-top: 200px;
+	padding-left: 350px;
+	min-height: 100vh;
+	background: url('../img/road.jpg') 0 -100px/cover no-repeat;
+	z-index: -2;
+	position: relative;
+}
+
+.car__body {
+	width: 400px;
+	height: 400px;
+	position: relative;
+	bottom: -300px;
+	animation: car 12s linear 0s 1 normal forwards;
+}
+
+@keyframes car {
+	0% {
+		transform: translate(-1000px, 0px);
+	}
+
+	46% {
+		transform: translate(400px, 0px);
+	}
+
+	75% {
+		transform: translate(400px, 0px);
+	}
+
+	100% {
+		transform: translate(2000px, 0px);
+
+
+	}
+}
+
+
+.wheel-left {
+	width: 105px;
+	height: 105px;
+	border-radius: 50%;
+	background-color: black;
+	position: relative;
+	top: 110px;
+	left: 100px;
+
+	animation-name: wheel-left;
+	animation-duration: .8s;
+	animation-iteration-count: 7;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+@keyframes wheel-left {
+	0% {
+		transform: rotate(0deg);
+	}
+
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.wheel-right {
+	width: 105px;
+	height: 105px;
+	border-radius: 50%;
+	background-color: rgb(5, 5, 5);
+	position: absolute;
+	top: 105px;
+	right: 100px;
+	animation-name: wheel-right;
+	animation-duration: .8s;
+	animation-timing-function: linear;
+	animation-iteration-count: 7;
+
+}
+
+@keyframes wheel-right {
+	0% {
+		transform: rotate(0deg);
+	}
+
+
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.window-left {
+	height: 100px;
+	width: 115px;
+	background-color: rgb(225, 155, 155);
+	position: absolute;
+	bottom: 0px;
+	left: -5px;
+	background-image: linear-gradient(to right, #e4f5fc 0%, #9fd8ef 86%, #2ab0ed 100%);
+	border-radius: 20px 0px 0px 0px;
+	animation-name: window-left;
+	animation-duration: 3s;
+	animation-delay: 7s;
+	animation-timing-function: ease;
+}
+
+@keyframes window-left {
+	0% {
+		height: 100%;
+	}
+
+	60% {
+		height: 0%;
+	}
+
+	100% {
+		height: 100%;
+
+	}
+}
+
+
+
+.window-right {
+	height: 100px;
+	width: 100px;
+	background-color: black;
+	background-image: linear-gradient(to right, #e4f5fc 0%, #9fd8ef 86%, #2ab0ed 100%);
+	position: absolute;
+	bottom: -1px;
+	left: 110px;
+	z-index: 2;
+	animation-name: window-right;
+	animation-duration: 3s;
+	animation-iteration-count: 1;
+	animation-delay: 7s;
+}
+
+@keyframes window-right {
+	0% {
+		height: 100%;
+
+	}
+
+
+	80% {
+		height: 20%;
+
+
+	}
+
+	100% {
+		height: 100%;
+	}
+}
+
+
+.car__upper-half {
+	position: relative;
+	width: 200px;
+	height: 100px;
+	background-color: gray;
+	background-image: url("../img/tom.png");
+	background-position: 60px 0;
+	background-repeat: no-repeat;
+	background-size: 100px 100px;
+
+}
+
+.car__upper-half::before {
+	content: "";
+	width: 155px;
+	height: 105px;
+	background-color: rgb(17, 20, 225);
+	border-radius: 110px 0px 0px 0px;
+	display: inline-block;
+	margin-left: -88px;
+	position: absolute;
+	bottom: 0px;
+}
+
+
+.car__upper-half::after {
+	width: 150px;
+	height: 106px;
+	background-color: rgb(17, 20, 225);
+	border-radius: 0px 100% 0px 0px;
+	content: "";
+	display: inline-block;
+	margin-left: 74px;
+	position: absolute;
+	top: -6px;
+	left: 105px;
+	transform: skew(20deg);
+}
+
+.window-divider {
+	position: absolute;
+	width: 5px;
+	height: 100px;
+	background-color: black;
+	left: 100px;
+	top: 0px;
+}
+
+
+.window-divider::before {
+	height: 6px;
+	width: 100px;
+	background-color: rgb(19, 1, 1);
+	content: "";
+	display: inline-block;
+	bottom: 13px;
+	right: 35px;
+	position: relative;
+	border-radius: 40px;
+	transform-origin: bottom right;
+	transform: rotate(15deg);
+}
+
+
+.window-right::after {
+	content: "";
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(to right, #e4f5fc 0%, #9fd8ef 86%, #2ab0ed 100%);
+	transform: skew(45deg);
+	display: inline-block;
+	position: relative;
+	left: 50px;
+
+}
+
+.car__lower-half {
+	width: 800px;
+	height: 150px;
+	background-color: rgb(204, 10, 10);
+	position: absolute;
+	left: -230px;
+	top: 85px;
+	border-radius: 60% 80% 0px 0px;
+	z-index: -1;
+
+}
+
+.door-left {
+	width: 100px;
+	height: 100px;
+	background-color: black;
+	position: absolute;
+	left: 250px;
+	top: 20px;
+	z-index: 1;
+}
+
+.door-left::before {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	background-color: black;
+	transform: skew(30deg);
+	content: "";
+	right: 30px;
+}
+
+
+.door-left::after {
+	position: absolute;
+	content: "";
+	width: 15px;
+	height: 3px;
+	background-color: yellow;
+	border-radius: 100%;
+	top: 30px;
+}
+
+.door-right {
+	width: 180px;
+	height: 100px;
+	background-color: black;
+	position: absolute;
+	right: 260px;
+	top: 20px;
+}
+
+.door-right::after {
+	position: absolute;
+	content: "";
+	width: 15px;
+	height: 3px;
+	background-color: yellow;
+	border-radius: 100%;
+	top: 30px;
+	left: 20px;
+}
+
+
+.wheel-left::before {
+	content: "";
+	position: absolute;
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	background: linear-gradient(to right, #9dd53a 0%, #a1d54f 50%, #80c217 51%, #7cbc0a 100%);
+	left: 7px;
+	top: 7px;
+
+}
+
+.wheel-hub-left {
+	height: 20px;
+	width: 20px;
+	background-color: rgb(222, 13, 13);
+	border-radius: 50%;
+	position: absolute;
+	top: 43px;
+	left: 43px;
+	z-index: 2;
+}
+
+
+.wheel-right::after {
+	content: "";
+	position: absolute;
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	background: linear-gradient(to right, #9dd53a 0%, #a1d54f 50%, #80c217 51%, #7cbc0a 100%);
+
+	left: 8px;
+	top: 7px;
+}
+
+.wheel-hub-right {
+	height: 20px;
+	width: 20px;
+	background-color: black;
+	border-radius: 50%;
+	position: absolute;
+	top: 43px;
+	left: 43px;
+	z-index: 1;
+}
+
+
+
+
+
+.fender-left {
+	position: absolute;
+	top: 93px;
+	left: 95px;
+	height: 55px;
+	width: 110px;
+	border-radius: 150px 150px 0 0;
+	background-color: green;
+	z-index: -2;
+}
+
+.stop-light {
+	height: 10px;
+	width: 5px;
+	background-color: red;
+	border-radius: 20px 0px 0px 20px;
+	transform: translate(-100px, -10px);
+}
+
+.fender-right {
+	position: absolute;
+	top: 93px;
+	right: 93px;
+	height: 55px;
+	width: 110px;
+	border-radius: 150px 150px 0 0;
+	background-color: green;
+	z-index: -2;
+}
+
+.head-light {
+	height: 20px;
+	width: 10px;
+	background-color: rgb(156, 180, 33);
+	border-radius: 0px 20px 20px 0px;
+	transform: translate(200px, 10px);
+}
